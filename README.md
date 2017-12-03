@@ -18,7 +18,7 @@ Open the link:
 
 ### Configuration
 
-the same location as **math.jar**
+the same location as **mathCosSequence.jar**
 
 * application.properties
 
