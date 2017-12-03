@@ -1,0 +1,35 @@
+buildscript {
+	ext {
+		springBootVersion = '1.5.2.RELEASE'
+	}
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'org.springframework.boot'
+
+springBoot {
+	executable = true
+}
+
+jar {
+
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	compile 'org.springframework.boot:spring-boot-starter-web'
+	compile 'org.springframework.boot:spring-boot-devtools'
+	compile 'org.springframework.boot:spring-boot-starter-cache'
+	testCompile 'org.springframework.boot:spring-boot-starter-test'
+    testCompile 'org.mockito:mockito-core:1.+'
+	testCompile 'junit:junit:4.12'
+}
